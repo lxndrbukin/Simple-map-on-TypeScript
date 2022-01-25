@@ -9,14 +9,10 @@ export interface Mappable {
 
 export class CustomMap {
     googleMap: google.maps.Map;
-
-    constructor(divId: string) {
+    constructor(divId: string, center: {lat: number, lng: number}) {
         this.googleMap = new google.maps.Map(document.getElementById(divId), {
-            zoom: 2,
-            center: {
-                lat: 0,
-                lng: 0
-            }
+            zoom: 4,
+            center
         });
     }
     addMarker(mappable: Mappable): void {
