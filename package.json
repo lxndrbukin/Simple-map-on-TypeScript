@@ -6,6 +6,26 @@
     "@faker-js/faker": "^6.0.0-alpha.2",
     "@types/faker": "^5.5.9",
     "@types/google.maps": "^3.47.2",
+    "concurrently": "^7.0.0",
     "faker": "^5.5.3"
-  }
+  },
+  "name": "maps",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./*.html",
+    "predeploy": "rm -rf dist && parcel build ./*.html --public-url https://github.com/lxndrbukin/Simple-map-on-TypeScript.git",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxndrbukin/Simple-map-on-TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxndrbukin/Simple-map-on-TypeScript/issues"
+  },
+  "homepage": "https://github.com/lxndrbukin/Simple-map-on-TypeScript#readme",
+  "description": ""
 }
